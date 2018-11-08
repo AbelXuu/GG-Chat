@@ -1,8 +1,5 @@
-GG-Chat-v1.5.1
-11/3/2018 
+GG Chat is a live chat app that users can chat with his friends anytime and anywhere.
 
-What's new:
-1. User can block and unblock other users.
 
 
 GG-Chat-v1.5.2
@@ -11,3 +8,12 @@ GG-Chat-v1.5.2
 What's new:
 1. Add EULA to register page.
 2. Add developer's contact information to the register page.
+
+GG-Chat-v1.5.1
+11/3/2018 
+
+What's new:
+1. User can block and unblock other users.
+
+
+
