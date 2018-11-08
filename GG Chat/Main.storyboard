@@ -197,12 +197,12 @@ DQoNCg
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">This Agreement shall remain in effect until terminated by you or G&amp;G Chat. 
+                                                <string key="content">This Agreement shall remain in effect until terminated by you or G&amp;G Chat. 
 G&amp;G Chat may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.
 This Agreement will terminate immediately, without prior notice from G&amp;G Chat in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Application and all copies thereof from your mobile device.
 Upon termination of this Agreement, you shall cease all use of the Application and delete all copies of the Application from your mobile.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
                                                 </attributes>
@@ -296,9 +296,9 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">Content may not be submitted to G&amp;G Chat, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.
+                                                <string key="content">Content may not be submitted to G&amp;G Chat, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
                                                 </attributes>
@@ -354,7 +354,7 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                                             <constraint firstAttribute="height" constant="30" id="4qr-Gl-0ej"/>
                                             <constraint firstAttribute="width" constant="71" id="BHA-do-faR"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -601,6 +601,7 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="CMO-jG-HvC" userLabel="ListCell" customClass="ListCell" customModule="GG_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -641,6 +642,7 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NdW-bI-YIx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
