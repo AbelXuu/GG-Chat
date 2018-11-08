@@ -6,8 +6,8 @@ GG-Chat-v1.5.2
 11/4/2018 
 
 What's new:
-1. Add EULA to register page.
-2. Add developer's contact information to the register page.
+1. Add EULA to registration page.
+2. Add developer's contact information to the registration page.
 
 GG-Chat-v1.5.1
 11/3/2018 
