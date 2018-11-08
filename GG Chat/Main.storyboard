@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="8Ny-HH-lhf">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome to G&G Chat-->
+        <scene sceneID="SAj-Rh-o9q">
+            <objects>
+                <viewController storyboardIdentifier="welcomeVC" id="w26-XG-9cC" customClass="WelcomeViewController" customModule="GG_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cQy-VU-q98"/>
+                        <viewControllerLayoutGuide type="bottom" id="9mT-Oj-xlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9g1-SA-C5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-Sa-2Rb">
+                                <rect key="frame" x="0.0" y="841" width="414" height="55"/>
+                                <color key="backgroundColor" red="0.21850717093805183" green="0.33679028006466899" blue="0.41217877538071068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Etm-9X-Xr6"/>
+                                </constraints>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xYK-ej-9R9" kind="push" identifier="goToLogin" id="K5b-fz-Pt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWY-w2-6La">
+                                <rect key="frame" x="0.0" y="796" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.18757797372779919" green="0.40712246192893398" blue="0.13067681760554534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="TbY-W7-xgr"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qQg-wA-Esh" kind="push" identifier="goToRegistration" id="1Yf-oM-MEQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-sR-rfK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rV4-Sa-2Rb" firstAttribute="top" secondItem="uWY-w2-6La" secondAttribute="bottom" id="1cv-Bu-g2K"/>
+                            <constraint firstAttribute="trailing" secondItem="rV4-Sa-2Rb" secondAttribute="trailing" id="6x0-yA-ofE"/>
+                            <constraint firstAttribute="trailing" secondItem="uWY-w2-6La" secondAttribute="trailing" id="CAj-Ps-fV4"/>
+                            <constraint firstItem="wWy-sR-rfK" firstAttribute="top" secondItem="9g1-SA-C5Y" secondAttribute="top" id="U9z-6l-1Jl"/>
+                            <constraint firstItem="uWY-w2-6La" firstAttribute="top" secondItem="wWy-sR-rfK" secondAttribute="bottom" id="UPK-9T-1bw"/>
+                            <constraint firstItem="uWY-w2-6La" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leading" id="X4I-Wn-xdH"/>
+                            <constraint firstItem="rV4-Sa-2Rb" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leading" id="d0O-ga-r05"/>
+                            <constraint firstItem="wWy-sR-rfK" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leading" id="rXD-WZ-eUP"/>
+                            <constraint firstAttribute="trailing" secondItem="wWy-sR-rfK" secondAttribute="trailing" id="sXH-1w-woT"/>
+                            <constraint firstAttribute="bottom" secondItem="rV4-Sa-2Rb" secondAttribute="bottom" id="yr4-eM-7lD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome to G&amp;G Chat" id="qIL-hP-GCy"/>
+                    <connections>
+                        <segue destination="o9X-1P-aea" kind="push" identifier="goToList" animates="NO" id="cf3-O6-Sqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1I-xB-PqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235.19999999999999" y="10.794602698650676"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="D59-Lz-QjT">
+            <objects>
+                <viewController storyboardIdentifier="registrationVC" id="qQg-wA-Esh" customClass="RegisterViewController" customModule="GG_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jB2-UX-7gJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQv-zc-UpP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15o-yi-McO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-jt-q3u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="897"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffX-Mv-79o">
+                                <rect key="frame" x="0.0" y="137" width="414" height="284"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1R-HS-xgc">
+                                        <rect key="frame" x="16" y="19" width="382" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XuY-dJ-oiY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-Xx-USU">
+                                        <rect key="frame" x="16" y="57" width="382" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="t4i-pt-0WT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67C-Ey-AV3">
+                                        <rect key="frame" x="16" y="262" width="382" height="30"/>
+                                        <color key="backgroundColor" red="0.14539031684398651" green="0.63518619537353516" blue="0.304024338722229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4rv-81-L2o"/>
+                                        </constraints>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="qQg-wA-Esh" eventType="touchUpInside" id="VlE-dg-fmH"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="st3-7D-dRI">
+                                        <rect key="frame" x="306" y="91" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="fF4-zU-blB"/>
+                                            <constraint firstAttribute="height" constant="55" id="wBl-Cp-vF4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFM-Ea-h0c">
+                                        <rect key="frame" x="40" y="98" width="241" height="41"/>
+                                        <color key="backgroundColor" red="0.11284757531583124" green="0.53705980329949243" blue="0.096628261560222833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Set Profile Photo">
+                                            <color key="titleColor" red="0.94931776489999997" green="0.99453941310000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profilePhotoButtonClicked:" destination="qQg-wA-Esh" eventType="touchUpInside" id="NP9-G6-0QA"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-Ed-Br7">
+                                        <rect key="frame" x="16" y="148" width="316" height="106"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">End-User License Agreement ("Agreement")
+Please read this End-User License Agreement ("Agreement") carefully before clicking the "I Agree" button, downloading or using G&amp;G Chat ("Application").
+
+By clicking the "I Agree" button, downloading or using the Application, you are agreeing to be bound by the terms and conditions of this Agreement.
+
+If you do not agree to the terms of this Agreement, do not click on the "I Agree" button and do not download or use the Application.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">In order to ensure G&amp;G Chat provides the best experience possible for everyone, we strongly enforce a no tolerance policy for objectionable content. If you see inappropriate messages, please use the "Show/Hide" button to hide them. If you see some abusive users, please block them using the “Block” button in the User List page. G&amp;G Chat will remove the objectionable content hidden by users and eject the abusive user blocked by users within 24 hours.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".SFNSText"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+DQoNCg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">1. License
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">G&amp;G Chat grants you a revocable, non-exclusive, non-transferable, limited license to download, install and use the Application solely for your personal, non-commercial purposes strictly in accordance with the terms of this Agreement.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">2. Term and Termination
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <mutableString key="content">This Agreement shall remain in effect until terminated by you or G&amp;G Chat. 
+G&amp;G Chat may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.
+This Agreement will terminate immediately, without prior notice from G&amp;G Chat in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Application and all copies thereof from your mobile device.
+Upon termination of this Agreement, you shall cease all use of the Application and delete all copies of the Application from your mobile.
+
+</mutableString>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">3. Third Party
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">This Agreement is between you and G&amp;G Chat only, and not Apple, Inc. (“Apple”). Notwithstanding the foregoing, you acknowledge that Apple and its subsidiaries are third party beneficiaries of this Agreement and Apple has the right to enforce this Agreement against you. G&amp;G Chat, not Apple, is solely responsible for the G&amp;G Chat App and its content.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">4. Support and Maintenance
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">G&amp;G Chat does provide minimal maintenance or support for it but not to the extent that any maintenance or support is required by applicable law, G&amp;G Chat, not Apple, shall be obligated to furnish any such maintenance or support.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">5. Warranty/Disclaim of Warranties
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">G&amp;G Chat disclaims all warranties about the G&amp;G Chat App to the fullest extent permitted by law. To the extent any warranty exists under law that cannot be disclaimed, G&amp;G Chat, not Apple, shall be solely responsible for such warranty.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">6. Age Restrictions
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">By using the G&amp;G Chat App, you represent and warrant that (a) you are 17 years of age or older and you agree to be bound by this Agreement and (b) your use of the G&amp;G Chat App does not violate any applicable law or regulation. Your access to the G&amp;G Chat App may be terminated without warning if G&amp;G Chat believes, in its sole discretion, that you are under the age of 17 years. 
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">7. Modifications to Application
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">G&amp;G Chat reserves the right to modify, suspend or discontinue, temporarily or permanently, the Application or any service to which it connects, with or without notice and without liability to you.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">8. Objectionable Content Policy
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <mutableString key="content">Content may not be submitted to G&amp;G Chat, who will moderate all content and ultimately decide whether or not to post a submission to the extent such content includes, is in conjunction with, or alongside any, Objectionable Content. Objectionable Content includes, but is not limited to: (i) sexually explicit materials; (ii) obscene, defamatory, libelous, slanderous, violent and/or unlawful content or profanity; (iii) content that infringes upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary right, or that is deceptive or fraudulent; (iv) content that promotes the use or sale of illegal or regulated substances, tobacco products, ammunition and/or firearms; and (v) gambling, including without limitation, any online casino, sports books, bingo or poker.
+
+</mutableString>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">9. Severability
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">If any provision of this Agreement is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">10. Contact Information
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">If you have any questions about this Agreement, please contact us by email at the following: yp_xu@outlook.com.
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fff-Sh-Uho" userLabel="Agree Switch">
+                                        <rect key="frame" x="348" y="209" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="9zt-gz-u7P"/>
+                                            <constraint firstAttribute="width" constant="49" id="Htc-OG-LNc"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="agreeSwitchChanged:" destination="qQg-wA-Esh" eventType="valueChanged" id="I8M-Vs-T2m"/>
+                                        </connections>
+                                    </switch>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="I Agree" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZv-4C-HYQ">
+                                        <rect key="frame" x="337" y="177" width="71" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4qr-Gl-0ej"/>
+                                            <constraint firstAttribute="width" constant="71" id="BHA-do-faR"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MfB-Ed-Br7" secondAttribute="trailing" constant="82" id="5XA-13-8oe"/>
+                                    <constraint firstItem="67C-Ey-AV3" firstAttribute="top" secondItem="MfB-Ed-Br7" secondAttribute="bottom" constant="8" id="6RB-xw-y4T"/>
+                                    <constraint firstItem="MfB-Ed-Br7" firstAttribute="leading" secondItem="ffX-Mv-79o" secondAttribute="leading" constant="16" id="6XI-aS-XxE"/>
+                                    <constraint firstItem="67C-Ey-AV3" firstAttribute="leading" secondItem="ffX-Mv-79o" secondAttribute="leading" constant="16" id="8Zz-Te-nzS"/>
+                                    <constraint firstItem="67C-Ey-AV3" firstAttribute="top" secondItem="yFM-Ea-h0c" secondAttribute="bottom" constant="123" id="9xk-N5-jy8"/>
+                                    <constraint firstAttribute="trailing" secondItem="SYb-Xx-USU" secondAttribute="trailing" constant="16" id="AGn-Pb-wvl"/>
+                                    <constraint firstAttribute="centerX" secondItem="SYb-Xx-USU" secondAttribute="centerX" id="AWf-fZ-SkT"/>
+                                    <constraint firstItem="67C-Ey-AV3" firstAttribute="top" secondItem="SYb-Xx-USU" secondAttribute="bottom" constant="175" id="CYn-61-z8A"/>
+                                    <constraint firstAttribute="trailing" secondItem="M1R-HS-xgc" secondAttribute="trailing" constant="16" id="SP8-GG-W4w"/>
+                                    <constraint firstItem="bZv-4C-HYQ" firstAttribute="leading" secondItem="MfB-Ed-Br7" secondAttribute="trailing" constant="5" id="SVq-mz-9Aj"/>
+                                    <constraint firstItem="M1R-HS-xgc" firstAttribute="top" secondItem="ffX-Mv-79o" secondAttribute="top" constant="19" id="T9l-Cm-ShN"/>
+                                    <constraint firstAttribute="trailing" secondItem="yFM-Ea-h0c" secondAttribute="trailing" constant="133" id="UaE-Qq-7y4"/>
+                                    <constraint firstItem="Fff-Sh-Uho" firstAttribute="top" secondItem="bZv-4C-HYQ" secondAttribute="bottom" constant="2" id="X5m-qa-WqZ"/>
+                                    <constraint firstItem="Fff-Sh-Uho" firstAttribute="leading" secondItem="MfB-Ed-Br7" secondAttribute="trailing" constant="16" id="XGj-W3-AGx"/>
+                                    <constraint firstAttribute="centerY" secondItem="SYb-Xx-USU" secondAttribute="centerY" constant="70" id="XLm-uC-uNN"/>
+                                    <constraint firstItem="yFM-Ea-h0c" firstAttribute="top" secondItem="SYb-Xx-USU" secondAttribute="bottom" constant="11" id="Xq2-od-4tr"/>
+                                    <constraint firstItem="MfB-Ed-Br7" firstAttribute="top" secondItem="yFM-Ea-h0c" secondAttribute="bottom" constant="9" id="dE6-Dd-18F"/>
+                                    <constraint firstItem="yFM-Ea-h0c" firstAttribute="leading" secondItem="ffX-Mv-79o" secondAttribute="leading" constant="40" id="fpr-Hw-Fvo"/>
+                                    <constraint firstItem="st3-7D-dRI" firstAttribute="leading" secondItem="yFM-Ea-h0c" secondAttribute="trailing" constant="25" id="gRB-2N-fTB"/>
+                                    <constraint firstItem="st3-7D-dRI" firstAttribute="top" secondItem="SYb-Xx-USU" secondAttribute="bottom" constant="4" id="gjg-Ih-vVR"/>
+                                    <constraint firstItem="bZv-4C-HYQ" firstAttribute="top" secondItem="st3-7D-dRI" secondAttribute="bottom" constant="31" id="kG2-K7-rxr"/>
+                                    <constraint firstAttribute="bottom" secondItem="67C-Ey-AV3" secondAttribute="bottom" constant="-8" id="kiu-rT-5Ax"/>
+                                    <constraint firstAttribute="trailing" secondItem="67C-Ey-AV3" secondAttribute="trailing" constant="16" id="l0R-re-ZgI"/>
+                                    <constraint firstItem="SYb-Xx-USU" firstAttribute="leading" secondItem="ffX-Mv-79o" secondAttribute="leading" constant="16" id="lNX-iA-dOK"/>
+                                    <constraint firstItem="SYb-Xx-USU" firstAttribute="top" secondItem="M1R-HS-xgc" secondAttribute="bottom" constant="8" id="oLi-xF-oi0"/>
+                                    <constraint firstAttribute="trailing" secondItem="st3-7D-dRI" secondAttribute="trailing" constant="53" id="pZR-N2-Sla"/>
+                                    <constraint firstItem="M1R-HS-xgc" firstAttribute="leading" secondItem="ffX-Mv-79o" secondAttribute="leading" constant="16" id="zcJ-qI-zV5"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GwL-Dy-Fls">
+                                <rect key="frame" x="0.0" y="433" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Contact us at email: yp_xu@outlook.com">
+                                        <attributes>
+                                            <color key="NSColor" red="0.3490949800186734" green="0.69551078680203049" blue="0.38485206177423625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PfL-jt-q3u" firstAttribute="leading" secondItem="15o-yi-McO" secondAttribute="leading" id="1IJ-ss-oVE"/>
+                            <constraint firstItem="uQv-zc-UpP" firstAttribute="top" secondItem="PfL-jt-q3u" secondAttribute="bottom" constant="-35" id="8vz-Tc-ydj"/>
+                            <constraint firstItem="PfL-jt-q3u" firstAttribute="top" secondItem="jB2-UX-7gJ" secondAttribute="bottom" constant="-88" id="CFC-YW-6Fr"/>
+                            <constraint firstItem="GwL-Dy-Fls" firstAttribute="top" secondItem="ffX-Mv-79o" secondAttribute="bottom" constant="12" id="G9y-3Z-7hE"/>
+                            <constraint firstAttribute="trailing" secondItem="GwL-Dy-Fls" secondAttribute="trailing" id="Oav-bh-Ki2"/>
+                            <constraint firstItem="GwL-Dy-Fls" firstAttribute="leading" secondItem="15o-yi-McO" secondAttribute="leading" id="QHt-W3-AXi"/>
+                            <constraint firstAttribute="trailing" secondItem="PfL-jt-q3u" secondAttribute="trailing" id="SCF-4t-ZNc"/>
+                            <constraint firstAttribute="trailing" secondItem="ffX-Mv-79o" secondAttribute="trailing" id="kgT-Qa-grC"/>
+                            <constraint firstItem="ffX-Mv-79o" firstAttribute="leading" secondItem="15o-yi-McO" secondAttribute="leading" id="sbF-0K-BT9"/>
+                            <constraint firstItem="ffX-Mv-79o" firstAttribute="top" secondItem="jB2-UX-7gJ" secondAttribute="bottom" constant="49" id="vgU-zh-VhL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="IBw-Pb-pcT"/>
+                    <connections>
+                        <outlet property="agreeSwitch" destination="Fff-Sh-Uho" id="8sW-c7-xg5"/>
+                        <outlet property="emailTextfield" destination="M1R-HS-xgc" id="EZN-co-Khq"/>
+                        <outlet property="passwordTextfield" destination="SYb-Xx-USU" id="pWb-Ds-G8q"/>
+                        <outlet property="profilePhoto" destination="st3-7D-dRI" id="jcs-kv-Ocz"/>
+                        <outlet property="profilePhotoButton" destination="yFM-Ea-h0c" id="DQK-Rb-o5P"/>
+                        <segue destination="o9X-1P-aea" kind="push" identifier="goToList" id="ruK-Ep-Thi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMZ-W7-skD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085.5072463768117" y="336.83035714285711"/>
+        </scene>
+        <!--Log In-->
+        <scene sceneID="Ku8-Lc-W7f">
+            <objects>
+                <viewController storyboardIdentifier="logInVC" id="xYK-ej-9R9" customClass="LogInViewController" customModule="GG_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxq-LK-1OE"/>
+                        <viewControllerLayoutGuide type="bottom" id="G8E-r3-c8B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b1r-c3-eoq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-Hj-HXi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="897"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr0-Ts-jsg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="282"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-XP-4Q7">
+                                        <rect key="frame" x="16" y="126" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD6-NY-DlK">
+                                        <rect key="frame" x="16" y="164" width="382" height="30"/>
+                                        <color key="backgroundColor" red="0.14539031684398651" green="0.63518619537353516" blue="0.304024338722229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logInPressed:" destination="xYK-ej-9R9" eventType="touchUpInside" id="Llx-K4-fZc"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWF-xv-G1L">
+                                        <rect key="frame" x="16" y="88" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="1o1-zR-5Hr"/>
+                                    <constraint firstAttribute="centerX" secondItem="zuQ-XP-4Q7" secondAttribute="centerX" id="6DW-Ma-vqz"/>
+                                    <constraint firstItem="zuQ-XP-4Q7" firstAttribute="top" secondItem="ZWF-xv-G1L" secondAttribute="bottom" constant="8" id="9qO-mU-bJe"/>
+                                    <constraint firstAttribute="centerY" secondItem="zuQ-XP-4Q7" secondAttribute="centerY" id="Koq-2N-zL7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zuQ-XP-4Q7" secondAttribute="trailing" constant="16" id="PbC-lU-nQN"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZWF-xv-G1L" secondAttribute="trailing" constant="16" id="RAW-Vw-BSa"/>
+                                    <constraint firstItem="ZWF-xv-G1L" firstAttribute="leading" secondItem="Cr0-Ts-jsg" secondAttribute="leading" constant="16" id="WoX-TH-VcD"/>
+                                    <constraint firstAttribute="trailing" secondItem="OD6-NY-DlK" secondAttribute="trailing" constant="16" id="cbh-RB-oAH"/>
+                                    <constraint firstItem="OD6-NY-DlK" firstAttribute="leading" secondItem="Cr0-Ts-jsg" secondAttribute="leading" constant="16" id="lcJ-YF-8D1"/>
+                                    <constraint firstItem="zuQ-XP-4Q7" firstAttribute="leading" secondItem="Cr0-Ts-jsg" secondAttribute="leading" constant="16" id="oxr-A5-5Mk"/>
+                                    <constraint firstItem="OD6-NY-DlK" firstAttribute="top" secondItem="zuQ-XP-4Q7" secondAttribute="bottom" constant="8" id="zu2-Ha-mWK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cr0-Ts-jsg" firstAttribute="top" secondItem="fxq-LK-1OE" secondAttribute="bottom" id="NbT-rd-KUc"/>
+                            <constraint firstAttribute="trailing" secondItem="Cr0-Ts-jsg" secondAttribute="trailing" id="TPw-ya-U3Y"/>
+                            <constraint firstItem="G8E-r3-c8B" firstAttribute="top" secondItem="ns8-Hj-HXi" secondAttribute="bottom" constant="-35" id="WT2-Gx-Man"/>
+                            <constraint firstItem="Cr0-Ts-jsg" firstAttribute="leading" secondItem="b1r-c3-eoq" secondAttribute="leading" id="erC-tY-VdK"/>
+                            <constraint firstAttribute="trailing" secondItem="ns8-Hj-HXi" secondAttribute="trailing" id="le5-9Z-DI3"/>
+                            <constraint firstItem="ns8-Hj-HXi" firstAttribute="leading" secondItem="b1r-c3-eoq" secondAttribute="leading" id="luA-TN-7hs"/>
+                            <constraint firstItem="ns8-Hj-HXi" firstAttribute="top" secondItem="b1r-c3-eoq" secondAttribute="top" id="ooS-RL-joJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In" id="GCy-uw-FP0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="ZWF-xv-G1L" id="A9I-P9-2rL"/>
+                        <outlet property="passwordTextfield" destination="zuQ-XP-4Q7" id="FBf-fZ-iYp"/>
+                        <segue destination="o9X-1P-aea" kind="push" identifier="goToList" id="9vh-j5-i9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewD-vV-GoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085.5072463768117" y="-338.16964285714283"/>
+        </scene>
+        <!--G&G Chat-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="chatVC" id="vXZ-lx-hvc" customClass="ChatViewController" customModule="GG_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="Background">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpY-IA-acB" userLabel="Compose View">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4K-YF-skl">
+                                        <rect key="frame" x="8" y="10" width="398" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="send"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="W4K-YF-skl" secondAttribute="trailing" constant="8" id="FgG-Op-0Gy"/>
+                                    <constraint firstItem="W4K-YF-skl" firstAttribute="leading" secondItem="WpY-IA-acB" secondAttribute="leading" constant="8" id="LIw-AA-Dk0"/>
+                                    <constraint firstItem="W4K-YF-skl" firstAttribute="top" secondItem="WpY-IA-acB" secondAttribute="top" constant="10" id="dTK-mk-kRm"/>
+                                    <constraint firstAttribute="height" constant="50" id="dyw-Nc-T3G"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-kw-TVm" userLabel="Message Table View">
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="jHH-VD-leb" customClass="CustomMessageCell" customModule="GG_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jHH-VD-leb" id="HGz-6w-eF9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell2" id="jUJ-QV-e05" customClass="CustomMessageCell2" customModule="GG_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUJ-QV-e05" id="sYk-8q-9Zt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WpY-IA-acB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="893-Zp-giU"/>
+                            <constraint firstItem="7eI-kw-TVm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8jD-EF-6Ev"/>
+                            <constraint firstItem="7eI-kw-TVm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Hlv-uC-xq8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WpY-IA-acB" secondAttribute="bottom" id="chh-iz-bqH"/>
+                            <constraint firstItem="WpY-IA-acB" firstAttribute="top" secondItem="7eI-kw-TVm" secondAttribute="bottom" id="mY4-TT-Oje"/>
+                            <constraint firstAttribute="trailing" secondItem="WpY-IA-acB" secondAttribute="trailing" id="sS0-jJ-zn7"/>
+                            <constraint firstAttribute="trailing" secondItem="7eI-kw-TVm" secondAttribute="trailing" id="z26-fa-Hmy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="G&amp;G Chat" id="OGj-fw-WBv"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="heightConstraint" destination="dyw-Nc-T3G" id="JPk-pd-pan"/>
+                        <outlet property="messageTableView" destination="7eI-kw-TVm" id="OYq-98-NhQ"/>
+                        <outlet property="messageTextfield" destination="W4K-YF-skl" id="rE7-AO-1UD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3138" y="56"/>
+        </scene>
+        <!--List View-->
+        <scene sceneID="Vat-lQ-sZt">
+            <objects>
+                <viewController title="List View" id="o9X-1P-aea" customClass="ListViewController" customModule="GG_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Odx-2K-aQK"/>
+                        <viewControllerLayoutGuide type="bottom" id="3uu-J0-Gae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Byn-7M-6FK" userLabel="Background">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CGZ-cg-8Xg" userLabel="List Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="CMO-jG-HvC" userLabel="ListCell" customClass="ListCell" customModule="GG_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CMO-jG-HvC" id="dOu-eD-kQT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User List" id="E2f-p7-08N">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="PjV-XR-8z1">
+                            <connections>
+                                <action selector="logOutPressed:" destination="o9X-1P-aea" id="zSQ-iG-6it"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listTableView" destination="CGZ-cg-8Xg" id="emJ-N8-dG6"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="goToChat" id="8o0-rh-JRX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhj-kc-v2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kGX-IT-aXC">
+            <objects>
+                <navigationController storyboardIdentifier="navBar1" automaticallyAdjustsScrollViewInsets="NO" id="8Ny-HH-lhf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NdW-bI-YIx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w26-XG-9cC" kind="relationship" relationship="rootViewController" id="zVv-In-YsK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nv2-mt-Fbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534.39999999999998" y="10.794602698650676"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="3200" height="2000"/>
+        <image name="background1" width="2048" height="2732"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ruK-Ep-Thi"/>
+    </inferredMetricsTieBreakers>
+</document>
