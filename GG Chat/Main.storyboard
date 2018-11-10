@@ -618,6 +618,7 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                     </view>
                     <navigationItem key="navigationItem" title="User List" id="E2f-p7-08N">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="PjV-XR-8z1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logOutPressed:" destination="o9X-1P-aea" id="zSQ-iG-6it"/>
                             </connections>
@@ -642,6 +643,7 @@ Upon termination of this Agreement, you shall cease all use of the Application a
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NdW-bI-YIx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

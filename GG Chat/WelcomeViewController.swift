@@ -16,6 +16,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "aec0da")
         
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: "goToList", sender: self)

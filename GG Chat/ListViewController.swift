@@ -25,7 +25,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
      
-
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "098cc4")
         
         // hide navigatioin button(< welcome)
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -39,7 +41,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         retrieveUsers()
         
-        listTableView.separatorStyle = .none
+        //listTableView.separatorStyle = .none
     }
     
 

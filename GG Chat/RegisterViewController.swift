@@ -27,6 +27,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "b1b9c1")
+        
         imagePicker.delegate = self
         
         
