@@ -115,7 +115,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 self.heightConstraint.constant = keyboardHeight + 18
             }
-            else if self.modelName == "iPhone X Max" {
+            else if self.modelName == "iPhone XS Max" {
                 self.heightConstraint.constant = keyboardHeight + 23
             }
             else if self.modelName == "iPhone XR" {
